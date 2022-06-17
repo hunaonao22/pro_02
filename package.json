@@ -20,6 +20,9 @@
     "serve": "webpack serve"
   },
   "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
     "html-webpack-plugin": "^5.5.0"
   }
 }

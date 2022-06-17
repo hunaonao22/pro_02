@@ -17,5 +17,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template:join(__dirname,'/public/index.html')
         })
-    ]
+    ],
+    module:{
+        rules:[
+            {
+                test:/\.css/i,
+                use:["css-loader"]
+            }
+        ]
+    }
 }

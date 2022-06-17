@@ -8,6 +8,9 @@ import gifSrc from './assets/1.gif'
 import pngSrc from './assets/logo_small.png'
 import './assets/fonts/iconfont.css'
 
+import App from './App.vue'
+
+
 const gif =  document.createElement('img')
 const png =  document.createElement('img')
 gif.src = gifSrc

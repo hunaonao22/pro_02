@@ -9,6 +9,10 @@ module.exports = {
         filename:'webpack-demo.js',
         clean:true
     },
+    devServer:{   
+        port:30000,
+        open : true
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template:join(__dirname,'/public/index.html')

@@ -27,6 +27,10 @@ module.exports = {
             {
                 test:/\.less/i,
                 use:["style-loader","css-loader","less-loader"]
+            },
+            {
+                test:/\.(png|gif|jpg|jpge)$/i,
+                type:"asset/resource"
             }
         ]
     }

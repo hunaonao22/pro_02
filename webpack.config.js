@@ -1,4 +1,6 @@
 const { join } = require('path')
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const EslintWebpackPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {VueLoaderPlugin} = require('vue-loader')
@@ -22,13 +24,18 @@ module.exports = {
         new VueLoaderPlugin(),
         new EslintWebpackPlugin({
             context:join(__dirname,'src/')
-        })
+        }),
+        new MiniCssExtractPlugin()
     ],
     module:{
         rules:[
+            // {
+            //     test:/\.css/i,
+            //     use:["style-loader","css-loader"]
+            // },
             {
                 test:/\.css/i,
-                use:["style-loader","css-loader"]
+                use:[MiniCssExtractPlugin.loader,"css-loader"]
             },
             {
                 test:/\.less/i,

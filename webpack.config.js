@@ -1,4 +1,5 @@
 const { join } = require('path')
+const EslintWebpackPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {VueLoaderPlugin} = require('vue-loader')
 module.exports = {
@@ -18,7 +19,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template:join(__dirname,'/public/index.html')
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new EslintWebpackPlugin({
+            context:join(__dirname,'src/')
+        })
     ],
     module:{
         rules:[
